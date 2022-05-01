@@ -1,0 +1,12 @@
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Release Date</th>
+    </tr>
+    <tr *ngFor="let ele of todos">
+        <td>{{ele.id}}</td>
+        <td>{{ele.title}}</td>
+        <td>{{ele.releaseDate}}</td>
+    </tr>
+</table>

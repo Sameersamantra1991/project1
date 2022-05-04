@@ -11,7 +11,10 @@ export class TodoService {
   constructor(private httpclient:HttpClient) {
 
    }
-   getAllTodos(): Observable<Todo[]> {
+   getAllTodos(): Observable<any> {
     return this.httpclient.get<Todo[]>('http://localhost:3000/posts')
+  }
+  deleteTodos(id):Observable<any>{
+    return this.httpclient.delete('http://localhost:3000/posts/'+ id);
   }
 }

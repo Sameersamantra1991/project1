@@ -9,6 +9,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { CenterComponent } from './center/center.component';
 import { FormsModule } from '@angular/forms';
+import { AddAngDateComponent } from './add-ang-date/add-ang-date.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -16,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     CenterComponent,
+    AddAngDateComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,7 +27,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     HttpClientModule,
     MatSidenavModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule,ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent],

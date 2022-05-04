@@ -1,0 +1,23 @@
+<div class="frmcls">
+
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Title:</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="title here" formControlName="ReleaseDate">
+        </div>
+
+
+        <span class="text-danger"
+            *ngIf="(registerFormControl.ReleaseDate.touched ) && registerFormControl.ReleaseDate.errors?.required">
+            Name is required
+        </span>
+        <div class="form-group">
+            <label for="exampleInputPassword1">ReleaseDate:</label>
+            <input class="form-control" id="exampleInputPassword1" placeholder="release date" type="date"
+                formControlName="ReleaseDate">
+        </div>
+
+        <button type="submit" class="btn btn-primary" >Submit</button>
+    </form>
+</div>

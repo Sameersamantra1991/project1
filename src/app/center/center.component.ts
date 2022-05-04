@@ -18,5 +18,12 @@ export class CenterComponent implements OnInit {
       });
   }
 
+  deleteData(id:any){
+    this.todoservice.deleteTodos(id).subscribe((deleteResponse)=>{
+      console.log(deleteResponse);
+      this.ngOnInit();
+    })
+  }
+
 }
 

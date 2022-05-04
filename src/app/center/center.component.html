@@ -1,12 +1,31 @@
-<table>
-    <tr>
-        <th>Id</th>
-        <th>Title</th>
-        <th>Release Date</th>
-    </tr>
-    <tr *ngFor="let ele of todos">
-        <td>{{ele.id}}</td>
-        <td>{{ele.title}}</td>
-        <td>{{ele.releaseDate}}</td>
-    </tr>
-</table>
+<div class="row">
+    <div class="col-md-8">
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Release Date</th>
+                <th>Action</th>
+            </tr>
+            <tr *ngFor="let ele of todos">
+                <td>{{ele.id}}</td>
+                <td>{{ele.title}}</td>
+                <td>{{ele.releaseDate}}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="deleteData(ele.id)">Delete</button>
+                    <button class="btn btn-success">Update</button>
+                    <button class="btn btn-info">Edit</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-md-4">
+        <!-- <label>Title:</label>
+        <input type="text" name="title"><br>
+        <label>Date:</label>
+        <input type="text" name="name"><br>
+        <button class="btn btn-success savebutton">Save</button>
+        <input type="reset" value="Reset" class="reset"> -->
+
+    </div>
+</div>

@@ -1,23 +1,55 @@
-<div class="frmcls">
+<div class="row">
 
-    <form [formGroup]="profileForm" (ngSubmit)="onSubmit(profileForm.value)">
-        <div class="form-group">
-            <label for="exampleInputEmail1">Title:</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="title here" formControlName="title">
+    <div class="col-md-8">
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Release Date</th>
+                <th>Action</th>
+            </tr>
+            <tr *ngFor="let ele of todos">
+                <td>{{ele.id}}</td>
+                <td>{{ele.title}}</td>
+                <td>{{ele.releaseDate}}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="deleteData(ele.id)">Delete</button>
+                    <button class="btn btn-success">Update</button>
+                    <button class="btn btn-info">Edit</button>
+                </td>
+            </tr>
+        </table>
+        
+
+    </div>
+    <div class="col-md-4">
+
+        <div class="frmcls">
+
+            <form [formGroup]="profileForm" (ngSubmit)="onSubmit(profileForm.value)">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Title:</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="title here" formControlName="title">
+                </div>
+        
+        
+                <span class="text-danger"
+                    *ngIf="(registerFormControl.title.touched ) && registerFormControl.title.errors?.required">
+                    Name is required
+                </span>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">ReleaseDate:</label>
+                    <input class="form-control" id="exampleInputPassword1" placeholder="release date" type="date"
+                        formControlName="releaseDate">
+                </div>
+        
+                <button type="submit" class="btn btn-primary" [disabled]="!profileForm.valid" >Submit</button>
+            </form>
         </div>
+        
+    </div>
 
-
-        <span class="text-danger"
-            *ngIf="(registerFormControl.title.touched ) && registerFormControl.title.errors?.required">
-            Name is required
-        </span>
-        <div class="form-group">
-            <label for="exampleInputPassword1">ReleaseDate:</label>
-            <input class="form-control" id="exampleInputPassword1" placeholder="release date" type="date"
-                formControlName="releaseDate">
-        </div>
-
-        <button type="submit" class="btn btn-primary" [disabled]="!profileForm.valid" >Submit</button>
-    </form>
 </div>
+
+

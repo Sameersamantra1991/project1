@@ -1,11 +1,6 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "AngularJS (1.0.0)",
-      "releaseDate": "June 14th, 2012"
-    },
-    {
       "id": 2,
       "title": "Angular 2",
       "releaseDate": "September 14, 2016"
@@ -16,19 +11,9 @@
       "releaseDate": "March 23, 2017"
     },
     {
-      "id": 4,
-      "title": "Angular 5",
-      "releaseDate": "November 1, 2017"
-    },
-    {
-      "title": "dsdfsdf",
-      "releaseDate": "2022-05-27",
-      "id": 11
-    },
-    {
-      "title": "dsdfsdf",
-      "releaseDate": "2022-05-25",
-      "id": 12
+      "title": "sachin",
+      "releaseDate": "2222-02-22",
+      "id": 4
     }
   ]
 }

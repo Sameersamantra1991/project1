@@ -15,6 +15,7 @@ import { Validators } from '@angular/forms';
   styleUrls: ['./add-ang-date.component.css'],
 })
 export class AddAngDateComponent implements OnInit {
+  todos:any;
   profileForm = this.fb.group({
     title: ['', Validators.required],
     releaseDate: ['', Validators.required],
@@ -22,7 +23,12 @@ export class AddAngDateComponent implements OnInit {
 
   constructor(private fb: FormBuilder,private todoservice:TodoService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(){
+    this.todoservice.getAllTodos()
+      .subscribe((response) => {
+        this.todos = response;
+      });
+  }
 
   get registerFormControl() {
     return this.profileForm.controls;
@@ -34,6 +40,25 @@ export class AddAngDateComponent implements OnInit {
 
     this.todoservice.postTodos(x).subscribe(()=>{
       console.log("it is done successfully")
+      this.ngOnInit();
     })
+  }
+  deleteData(id:any){
+    this.todoservice.deleteTodos(id).subscribe((deleteResponse)=>{
+      console.log(deleteResponse);
+      this.ngOnInit();
+    })
+  }
+
+  updatefun(id: any){
+
+    console.log(id);
+    this.todoservice.getuserbyId(id).subscribe((data)=>{
+      console.log(data);
+      this.ngOnInit();
+     
+    })
+
+
   }
 }

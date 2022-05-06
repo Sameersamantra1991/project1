@@ -28,7 +28,12 @@ export class CenterComponent implements OnInit {
 
   updatefun(id: any){
 
-    console.log(id)
+    console.log(id);
+    this.todoservice.getuserbyId(id).subscribe((data)=>{
+      console.log(data);
+     
+    })
+
 
   }
 

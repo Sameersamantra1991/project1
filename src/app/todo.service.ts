@@ -17,4 +17,7 @@ export class TodoService {
   deleteTodos(id):Observable<any>{
     return this.httpclient.delete('http://localhost:3000/posts/'+ id);
   }
+  postTodos(obj: any):Observable<any>{
+    return this.httpclient.post('http://localhost:3000/posts/',obj);
+  }
 }

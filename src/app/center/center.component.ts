@@ -25,5 +25,12 @@ export class CenterComponent implements OnInit {
     })
   }
 
+
+  updatefun(id: any){
+
+    console.log(id)
+
+  }
+
 }
 

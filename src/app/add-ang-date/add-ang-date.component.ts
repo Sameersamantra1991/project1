@@ -1,4 +1,10 @@
+
+import { TodoService } from '../todo.service'
+
+
 import { Component, OnInit } from '@angular/core';
+
+
 
 import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
@@ -10,11 +16,11 @@ import { Validators } from '@angular/forms';
 })
 export class AddAngDateComponent implements OnInit {
   profileForm = this.fb.group({
-    Title: ['', Validators.required],
-    ReleaseDate: ['', Validators.required],
+    title: ['', Validators.required],
+    releaseDate: ['', Validators.required],
   });
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder,private todoservice:TodoService) {}
 
   ngOnInit(): void {}
 
@@ -22,7 +28,12 @@ export class AddAngDateComponent implements OnInit {
     return this.profileForm.controls;
   }
 
-  onSubmit() {
-    console.warn(this.profileForm.value);
+  onSubmit(x: any) {
+    console.warn(this.profileForm.value );
+    console.log(x);
+
+    this.todoservice.postTodos(x).subscribe(()=>{
+      console.log("it is done successfully")
+    })
   }
 }

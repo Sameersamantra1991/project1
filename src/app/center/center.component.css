@@ -1,9 +1,19 @@
 table,th,tr,td{
     border: 1px solid black;
-    
+    padding:5px;
 }
 table{
-    width: 50%;
+    width: 90%;
     text-align:center;
     margin-left: 20px;
+}
+button{
+    margin-right: 10px;
+
+}
+input{
+    margin-bottom: 15px;
+}
+.savebutton{
+    margin-left: 37px;
 }

@@ -4,12 +4,12 @@
         <div class="form-group">
             <label for="exampleInputEmail1">Title:</label>
             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="title here" formControlName="ReleaseDate">
+                placeholder="title here" formControlName="Title">
         </div>
 
 
         <span class="text-danger"
-            *ngIf="(registerFormControl.ReleaseDate.touched ) && registerFormControl.ReleaseDate.errors?.required">
+            *ngIf="(registerFormControl.Title.touched ) && registerFormControl.Title.errors?.required">
             Name is required
         </span>
         <div class="form-group">
@@ -17,6 +17,10 @@
             <input class="form-control" id="exampleInputPassword1" placeholder="release date" type="date"
                 formControlName="ReleaseDate">
         </div>
+        <span class="text-danger"
+            *ngIf="(registerFormControl.ReleaseDate.touched ) && registerFormControl.ReleaseDate.errors?.required">
+            Name is required
+        </span>
 
         <button type="submit" class="btn btn-primary" >Submit</button>
     </form>

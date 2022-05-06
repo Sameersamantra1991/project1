@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSidenavModule } from '@angular/material/sidenav';
 import { CenterComponent } from './center/center.component';
 import { FormsModule } from '@angular/forms';
 import { AddAngDateComponent } from './add-ang-date/add-ang-date.component';
@@ -26,7 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    MatSidenavModule,
+    // MatSidenavModule
     BrowserAnimationsModule,ReactiveFormsModule 
   ],
   providers: [],

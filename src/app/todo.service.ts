@@ -20,4 +20,7 @@ export class TodoService {
   postTodos(obj: any):Observable<any>{
     return this.httpclient.post('http://localhost:3000/posts/',obj);
   }
+  getuserbyId(id: any){
+    return this.httpclient.get('http://localhost:3000/posts/'+id)
+  }
 }

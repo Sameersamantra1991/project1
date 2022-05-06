@@ -2,8 +2,14 @@
     height: 20vh;
 }
 
-.center{
+/* .center{
     height: 70vh;
+} */
+
+.outlet{
+margin-top: 40px;
+margin-bottom: 20px;
+
 }
 
 .footer{

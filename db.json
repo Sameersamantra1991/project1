@@ -1,11 +1,6 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "AngularJS (1.0.0)",
-      "releaseDate": "June 14th, 2012"
-    },
-    {
       "id": 2,
       "title": "Angular 2",
       "releaseDate": "September 14, 2016"

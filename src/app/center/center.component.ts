@@ -43,11 +43,17 @@ export class CenterComponent implements OnInit {
     });
   }
 
-  onEdit(data) {
+  onEdit(data: any) {
     console.log(data);
     console.log("on edit method is called");
+    this.todoservice.updateUserbyId(data).subscribe((data)=>{
+
+      console.log(data);
+
+    })
    
     this.profileForm.reset();
     document.getElementById("clo").click();
+    this.ngOnInit();
   }
 }

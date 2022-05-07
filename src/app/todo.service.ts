@@ -8,6 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class TodoService {
 
+  idhere:any = '';
+
   constructor(private httpclient:HttpClient) {
 
    }
@@ -21,10 +23,13 @@ export class TodoService {
     return this.httpclient.post('http://localhost:3000/posts/',obj);
   }
   getuserbyId(id: any){
+
+    this.idhere = id;
+
     return this.httpclient.get('http://localhost:3000/posts/'+id)
   }
 
   updateUserbyId(obj: any){
-    return this.httpclient.put('http://localhost:3000/posts',obj)
+    return this.httpclient.put('http://localhost:3000/posts/'+this.idhere,obj)
   }
 }

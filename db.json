@@ -1,8 +1,8 @@
 {
   "posts": [
     {
-      "title": "Johndddddd",
-      "releaseDate": "999999999999999",
+      "title": "sameer",
+      "releaseDate": "55555555555",
       "id": 2
     },
     {
@@ -11,19 +11,20 @@
       "id": 3
     },
     {
-      "title": "John",
+      "title": "John3333",
       "releaseDate": 30,
       "id": 4
     },
     {
-      "title": "dsdfsdf",
-      "releaseDate": "2022-05-27",
-      "id": 11
-    },
-    {
-      "title": "dsdfsdf",
-      "releaseDate": "2022-05-25",
-      "id": 12
+      "title": "angular",
+      "releaseDate": "2022-05-08",
+      "id": 13
     }
-  ]
+  ],
+  "users": [{
+    "name": "angular",
+    "email": "angulaar",
+    "password": "angulaar",
+    "id": 1
+  }]
 }

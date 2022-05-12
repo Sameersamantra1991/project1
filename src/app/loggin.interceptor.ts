@@ -14,7 +14,7 @@ export class LogginInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     console.log(request);
-    console.log('request made to ' + request.url);
+    console.log('request made to added ' + request.url);
     return next.handle(request);
   }   
 }

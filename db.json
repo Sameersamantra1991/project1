@@ -9,6 +9,54 @@
       "title": "sachin tendulkar",
       "releaseDate": "2022-05-18",
       "id": 6
+    },
+    {
+      "title": "John",
+      "releaseDate": "304444456666",
+      "id": 3
+    },
+    {
+      "title": "John3333",
+      "releaseDate": 30,
+      "id": 4
+    }
+  ],
+  "users": [
+    {
+      "name": "angular",
+      "email": "angulaar",
+      "password": "angulaar",
+      "id": 1
+    },
+    {
+      "email": "sachin@gmail.com",
+      "password": "$2a$10$zhrqA2kPOIgInTXqqqoFxeFQZ/fkGrOqaf365zRdr1Yh7qsxZzau.",
+      "name": "sachin",
+      "id": 2
+    },
+    {
+      "email": "sameer@gmail.com",
+      "password": "$2a$10$rcLZEtngZhcPFGzIxTohRuIchLYqsZWuYD0w0vutGVBm4JI3xKWaO",
+      "name": "sameer",
+      "id": 3
+    },
+    {
+      "email": "sankar@gmail.com",
+      "password": "$2a$10$UMTcWolX67OlLBBa3NcyhuN8zuRimNmvZeglhIXhhehzEy2mMhr.C",
+      "name": "sankar",
+      "id": 4
+    },
+    {
+      "email": "aaa@gmail.com",
+      "password": "$2a$10$aC3psJrpNy4hpI49zQLThO2A4QUAcnMrADv3w92jnUdCto.INN3sm",
+      "name": "aaa",
+      "id": 5
+    },
+    {
+      "email": "kumar@gmail.com",
+      "password": "$2a$10$V2Vperz69L4AkyJGpDDqUO.qjYt/CDJtRcWJUzQ0xid31ATUAHeIa",
+      "name": "kumar",
+      "id": 6
     }
   ]
 }

@@ -1,0 +1,10 @@
+<div class="col-6">
+    <form [formGroup]="loginForm" (ngSubmit)=" onLogin(loginForm.value)">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email"
+            formControlName="email">
+        <label>Password</label>
+        <input type="password" class="form-control" placeholder="Password" formControlName="password">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

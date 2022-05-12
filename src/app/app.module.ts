@@ -1,3 +1,6 @@
+import { JwtInterceptorInterceptor } from './jwt-interceptor.interceptor';
+import { ModifyHeaderInterceptor } from './modify-header.interceptor';
+import { TodoService } from './todo.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -11,6 +14,10 @@ import { CenterComponent } from './center/center.component';
 import { FormsModule } from '@angular/forms';
 import { AddAngDateComponent } from './add-ang-date/add-ang-date.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+
 
 
 @NgModule({
@@ -20,6 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     CenterComponent,
     AddAngDateComponent,
+    RegisterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,9 +36,21 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     HttpClientModule,
     MatSidenavModule,
-    BrowserAnimationsModule,ReactiveFormsModule 
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    TodoService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ModifyHeaderInterceptor,
+      multi: true,
+    },{
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptorInterceptor,
+      multi: true,
+    }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

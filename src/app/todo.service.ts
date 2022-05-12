@@ -23,4 +23,8 @@ export class TodoService {
   getuserbyId(id: any){
     return this.httpclient.get('http://localhost:3000/posts/'+id)
   }
+
+  updateUserbyId(obj: any){
+    return this.httpclient.put('http://localhost:3000/posts',obj)
+  }
 }

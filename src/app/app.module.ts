@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,6 +11,7 @@ import { CenterComponent } from './center/center.component';
 import { FormsModule } from '@angular/forms';
 import { AddAngDateComponent } from './add-ang-date/add-ang-date.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LogginInterceptor } from './loggin.interceptor';
 
 
 @NgModule({
@@ -29,7 +30,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatSidenavModule,
     BrowserAnimationsModule,ReactiveFormsModule 
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS, useClass:LogginInterceptor, multi:true}
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
